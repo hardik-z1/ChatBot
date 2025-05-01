@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MANIT Library Chatbot</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="https://upload.wikimedia.org/wikipedia/en/4/4f/Maulana_Azad_National_Institute_of_Technology_Logo.png" alt="MANIT Logo">
+            <h1>MANIT Library Assistant</h1>
+        </div>
+        <div class="chat-container" id="chat-container">
+            <div class="message bot-message">
+                Hello! I'm the MANIT Library Assistant. How can I help you today? You can ask me about:
+                <ul>
+                    <li>Library cards and access</li>
+                    <li>Borrowing and renewing books</li>
+                    <li>Digital resources and e-books</li>
+                    <li>Library timings and facilities</li>
+                    <li>And much more!</li>
+                </ul>
+            </div>
+        </div>
+        <div class="quick-questions">
+            <div class="quick-question" onclick="sendQuickQuestion('Do I need my library card to enter?')">Library Card?</div>
+            <div class="quick-question" onclick="sendQuickQuestion('How do I renew a book?')">Book Renewal</div>
+            <div class="quick-question" onclick="sendQuickQuestion('What are the library timings?')">Library Hours</div>
+            <div class="quick-question" onclick="sendQuickQuestion('Can I access e-books?')">E-books</div>
+            <div class="quick-question" onclick="sendQuickQuestion('What if I lose a book?')">Lost Book</div>
+            <div class="quick-question" onclick="sendQuickQuestion('Are there group study rooms?')">Study Rooms</div>
+        </div>
+        <div class="input-container">
+            <input type="text" id="user-input" placeholder="Type your question here..." onkeypress="handleKeyPress(event)">
+            <button id="send-btn" onclick="sendMessage()">Send</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
